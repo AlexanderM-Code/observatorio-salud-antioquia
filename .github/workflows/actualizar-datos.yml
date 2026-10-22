@@ -1,11 +1,17 @@
 name: Actualizar datos
 
 # Descarga los datos más recientes de SIVIGILA, los limpia y publica los
-# archivos que usa la página. Corre el día 1 de cada mes y también a mano.
+# archivos que usa la página. Corre el día 1 de cada mes, a mano, y cuando
+# cambia el código del pipeline.
 on:
   schedule:
     - cron: "17 11 1 * *"
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "etl/**"
+      - ".github/workflows/actualizar-datos.yml"
 
 permissions:
   contents: write
