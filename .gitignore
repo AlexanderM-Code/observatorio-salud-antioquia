@@ -1,0 +1,21 @@
+# Descarga cruda (se regenera con el pipeline)
+data/raw/
+
+# Credenciales
+.env
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+
+# Editores y sistema
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Copias de trabajo de Power BI
+*.pbix.bak

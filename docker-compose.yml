@@ -1,0 +1,50 @@
+# Levanta todo el observatorio con un comando:
+#   docker compose up -d db                 # 1. base de datos
+#   docker compose run --rm etl             # 2. descarga, limpia y carga los datos
+#   docker compose up -d api                # 3. API en http://localhost:8000/docs
+#
+# Las credenciales se leen del archivo .env (copia .env.example).
+
+services:
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_DATABASE: observatorio_salud
+      MYSQL_USER: ${MYSQL_USER:-observatorio}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:-observatorio}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-cambia-esta-clave}
+    ports:
+      - "3306:3306"
+    volumes:
+      - datos_mysql:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 5s
+      retries: 20
+
+  etl:
+    build: .
+    command: ["python", "-m", "etl.pipeline"]
+    environment:
+      MYSQL_URL: mysql+pymysql://${MYSQL_USER:-observatorio}:${MYSQL_PASSWORD:-observatorio}@db:3306/observatorio_salud
+      SOCRATA_APP_TOKEN: ${SOCRATA_APP_TOKEN:-}
+    volumes:
+      - ./data:/app/data
+      - ./docs/data:/app/docs/data
+    depends_on:
+      db:
+        condition: service_healthy
+    profiles: ["etl"]
+
+  api:
+    build: .
+    environment:
+      MYSQL_URL: mysql+pymysql://${MYSQL_USER:-observatorio}:${MYSQL_PASSWORD:-observatorio}@db:3306/observatorio_salud
+    ports:
+      - "8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  datos_mysql:

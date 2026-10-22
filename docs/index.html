@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Observatorio de Salud Pública de Antioquia</title>
+  <meta name="description" content="Análisis de los casos notificados al SIVIGILA en Antioquia entre 2007 y 2022: dengue, malaria, varicela, tuberculosis y leishmaniasis.">
+  <meta property="og:title" content="Observatorio de Salud Pública de Antioquia">
+  <meta property="og:description" content="Dengue, malaria y otros eventos de salud pública en Antioquia, 2007–2022, con datos abiertos del Instituto Nacional de Salud.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#inicio">Observatorio de Salud Antioquia</a>
+    <nav aria-label="Principal">
+      <ul>
+        <li><a href="#dengue">Dengue</a></li>
+        <li><a href="#malaria">Malaria</a></li>
+        <li><a href="#explorar">Explorar</a></li>
+        <li><a href="#metodo">Método</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="intro wrap">
+      <h1>Observatorio de Salud Pública de Antioquia</h1>
+      <p class="lead">Qué enfermedades se notifican en Antioquia, cuándo llegan sus picos y dónde se concentran. Análisis de <strong id="casos-total">1.185.468</strong> casos reportados al SIVIGILA entre <span id="anio-inicio">2007</span> y <span id="anio-fin">2022</span>.</p>
+      <p class="byline">Un proyecto de <a href="https://alexanderm-code.github.io/">Alexander Mejía Ospina</a> con datos abiertos del Instituto Nacional de Salud.</p>
+    </section>
+
+    <section id="dengue" class="chapter wrap">
+      <div class="chapter-text">
+        <h2>El dengue llega en olas</h2>
+        <p>La mayoría de los años Antioquia notifica entre 1.000 y 7.000 casos de dengue. Pero en <strong>2010</strong> y <strong>2016</strong> hubo epidemias de más de 25.000 casos cada una.</p>
+        <p>Dentro del año también hay un patrón: en 2016 los casos subieron desde marzo, alcanzaron el pico en la <strong>semana 27</strong> (comienzos de julio, con 905 casos) y bajaron hacia diciembre.</p>
+        <p>Medellín concentra cerca de la <strong>mitad</strong> de todos los casos de dengue del departamento.</p>
+      </div>
+      <div class="charts">
+        <figure class="chart">
+          <figcaption>Casos de dengue por año en Antioquia</figcaption>
+          <div id="chart-dengue-anual" class="chart-area" role="img" aria-label="Casos de dengue por año"></div>
+        </figure>
+        <figure class="chart">
+          <figcaption>
+            Casos de dengue por semana epidemiológica en
+            <select id="anio-semanal" aria-label="Año de la curva semanal"></select>
+          </figcaption>
+          <div id="chart-dengue-semanal" class="chart-area" role="img" aria-label="Casos de dengue por semana"></div>
+        </figure>
+      </div>
+    </section>
+
+    <section id="malaria" class="chapter chapter-alt">
+      <div class="wrap chapter-grid">
+        <div class="chapter-text">
+          <h2>La malaria cayó casi 90 %, pero sigue en el Bajo Cauca</h2>
+          <p>La malaria vivax pasó de <strong>36.768 casos en 2010</strong> a <strong>3.748 en 2017</strong>. Desde entonces se mantiene entre 4.000 y 6.500 casos al año.</p>
+          <p>A diferencia del dengue, que es urbano, la malaria se concentra en municipios mineros y rurales. <strong>El Bagre, Cáceres y Zaragoza</strong> suman casi la mitad de todos los casos del periodo.</p>
+        </div>
+        <div class="charts">
+          <figure class="chart">
+            <figcaption>Malaria vivax y falciparum por año</figcaption>
+            <div id="chart-malaria" class="chart-area" role="img" aria-label="Casos de malaria por año"></div>
+            <div class="legend"><span>Vivax</span><span class="l2">Falciparum</span></div>
+          </figure>
+          <figure class="chart">
+            <figcaption>Municipios con más casos de malaria vivax, 2007–2022</figcaption>
+            <ol id="top-malaria" class="ranking"></ol>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="explorar" class="chapter wrap">
+      <h2>Explora cada enfermedad</h2>
+      <p class="chapter-lead">Elige un evento para ver su evolución entre 2007 y 2022.</p>
+      <div class="picker" role="group" aria-label="Elige un evento" id="picker"></div>
+      <figure class="chart chart-wide">
+        <figcaption id="explorar-titulo">Casos por año</figcaption>
+        <div id="chart-explorar" class="chart-area" role="img" aria-label="Casos por año del evento seleccionado"></div>
+        <p id="explorar-nota" class="note"></p>
+      </figure>
+    </section>
+
+    <section id="metodo" class="chapter wrap method">
+      <h2>Cómo se construyó</h2>
+      <div class="method-grid">
+        <div>
+          <h3>Pipeline de datos</h3>
+          <p>Un script en Python descarga los registros de Antioquia desde la API de datos.gov.co, los limpia con Pandas y los carga en un modelo estrella en MySQL. Cada mes, GitHub Actions lo vuelve a ejecutar y actualiza esta página.</p>
+        </div>
+        <div>
+          <h3>Problemas de calidad corregidos</h3>
+          <ul>
+            <li>Códigos DIVIPOLA sin ceros iniciales: <code>5001</code> pasa a <code>05001</code>.</li>
+            <li>Conteos guardados como texto, convertidos y validados.</li>
+            <li>Registros de "municipio desconocido" marcados para excluirlos de los rankings.</li>
+            <li>El código 05042 aparecía como "ANTIOQUIA": es Santa Fe de Antioquia.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Tecnologías</h3>
+          <p>Python, Pandas, MySQL, SQL con funciones de ventana, FastAPI, Docker, GitHub Actions, Power BI y una página en HTML, CSS y JavaScript.</p>
+          <p><a href="https://github.com/AlexanderM-Code/observatorio-salud-antioquia">Ver el código en GitHub</a></p>
+        </div>
+      </div>
+      <p class="note">Los datos son casos notificados al sistema de vigilancia, no la totalidad de los casos ocurridos. Un aumento puede reflejar tanto más enfermedad como mejor notificación.</p>
+    </section>
+  </main>
+
+  <footer class="footer wrap">
+    <p>Fuente: <a href="https://www.datos.gov.co/d/4hyg-wa9d">Datos de Vigilancia en Salud Pública de Colombia</a>, Instituto Nacional de Salud, licencia CC BY-SA 4.0. Datos actualizados el <span id="actualizado">2026-10-21</span>.</p>
+    <p>Hecho por <a href="https://alexanderm-code.github.io/">Alexander Mejía Ospina</a>, Medellín.</p>
+  </footer>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

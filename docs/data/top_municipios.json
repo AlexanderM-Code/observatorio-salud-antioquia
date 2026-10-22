@@ -1,0 +1,106 @@
+{
+ "210": [
+  {
+   "codigo": "05001",
+   "municipio": "Medellin",
+   "casos": 50327
+  },
+  {
+   "codigo": "05360",
+   "municipio": "Itagui",
+   "casos": 8197
+  },
+  {
+   "codigo": "05088",
+   "municipio": "Bello",
+   "casos": 5754
+  },
+  {
+   "codigo": "05266",
+   "municipio": "Envigado",
+   "casos": 2462
+  },
+  {
+   "codigo": "05045",
+   "municipio": "Apartado",
+   "casos": 2362
+  },
+  {
+   "codigo": "05837",
+   "municipio": "Turbo",
+   "casos": 2063
+  },
+  {
+   "codigo": "05490",
+   "municipio": "Necocli",
+   "casos": 1493
+  },
+  {
+   "codigo": "05579",
+   "municipio": "Puerto Berrio",
+   "casos": 1089
+  },
+  {
+   "codigo": "05042",
+   "municipio": "Santa Fe De Antioquia",
+   "casos": 1069
+  },
+  {
+   "codigo": "05212",
+   "municipio": "Copacabana",
+   "casos": 923
+  }
+ ],
+ "490": [
+  {
+   "codigo": "05250",
+   "municipio": "El Bagre",
+   "casos": 46552
+  },
+  {
+   "codigo": "05120",
+   "municipio": "Caceres",
+   "casos": 26787
+  },
+  {
+   "codigo": "05895",
+   "municipio": "Zaragoza",
+   "casos": 21394
+  },
+  {
+   "codigo": "05790",
+   "municipio": "Taraza",
+   "casos": 11492
+  },
+  {
+   "codigo": "05736",
+   "municipio": "Segovia",
+   "casos": 10746
+  },
+  {
+   "codigo": "05837",
+   "municipio": "Turbo",
+   "casos": 10400
+  },
+  {
+   "codigo": "05495",
+   "municipio": "Nechi",
+   "casos": 6666
+  },
+  {
+   "codigo": "05604",
+   "municipio": "Remedios",
+   "casos": 6266
+  },
+  {
+   "codigo": "05490",
+   "municipio": "Necocli",
+   "casos": 6135
+  },
+  {
+   "codigo": "05665",
+   "municipio": "San Pedro De Uraba",
+   "casos": 5680
+  }
+ ]
+}

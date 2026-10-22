@@ -1,0 +1,125 @@
+/* Observatorio de Salud Pública de Antioquia
+   Misma identidad visual del portafolio de Alexander Mejía. */
+
+:root {
+  --deep: #0f2027;
+  --tide: #172e37;
+  --reef: #203a43;
+  --sea: #2c5364;
+  --signal: #4fc3f7;
+  --signal-strong: #8ad8fb;
+  --amber: #ffbf7a;
+  --foam: #eaf4f7;
+  --mist: #a9c4ce;
+
+  --display: "Bricolage Grotesque", system-ui, sans-serif;
+  --body: "Atkinson Hyperlegible", system-ui, sans-serif;
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+
+  --wrap: 74rem;
+  --margin: clamp(1rem, 4vw, 2rem);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scrollbar-color: var(--sea) var(--deep); color-scheme: dark; scroll-behavior: smooth; }
+body {
+  margin: 0; background: var(--deep); color: var(--foam);
+  font: 400 1.0625rem/1.6 var(--body); -webkit-font-smoothing: antialiased;
+}
+::selection { background: var(--signal); color: var(--deep); }
+h1, h2, h3 { font-family: var(--display); margin: 0; line-height: 1.05; text-wrap: balance; }
+p { margin: 0; }
+a { color: var(--signal); text-underline-offset: 4px; }
+:focus-visible { outline: 3px solid var(--signal); outline-offset: 3px; border-radius: 4px; }
+code { font-size: .92em; background: var(--reef); padding: .05em .35em; border-radius: 4px; }
+
+.wrap, .topbar { max-width: var(--wrap); margin-left: auto; margin-right: auto; padding-left: var(--margin); padding-right: var(--margin); }
+
+/* Barra superior */
+.topbar { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding-top: 1.2rem; padding-bottom: 1.2rem; }
+.brand { font: 700 1.05rem var(--display); color: var(--foam); text-decoration: none; }
+.topbar ul { display: flex; gap: clamp(.9rem, 2.5vw, 1.8rem); list-style: none; margin: 0; padding: 0; }
+.topbar nav a { color: var(--foam); text-decoration: none; }
+
+/* Introducción */
+.intro { padding-top: clamp(3rem, 8vw, 6rem); }
+.intro h1 { font-size: clamp(2.6rem, 7vw, 5.6rem); font-weight: 800; letter-spacing: -.035em; max-width: 14ch; line-height: .98; }
+.lead { font-size: clamp(1.15rem, 1.8vw, 1.4rem); line-height: 1.5; max-width: 44rem; margin-top: 2rem; }
+.lead strong { color: var(--signal); }
+.byline { color: var(--mist); margin-top: 1.2rem; }
+
+/* Capítulos */
+.chapter { margin-top: clamp(5rem, 11vw, 9rem); }
+.chapter h2 { font-size: clamp(2rem, 4.2vw, 3.2rem); font-weight: 800; letter-spacing: -.03em; margin-bottom: 1.5rem; }
+.chapter-text { display: grid; gap: 1rem; max-width: 40rem; }
+.chapter-lead { color: var(--mist); margin-top: -.6rem; }
+#dengue { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(2rem, 5vw, 4rem); align-items: start; }
+.chapter-alt { background: var(--tide); padding: clamp(4rem, 9vw, 6.5rem) 0; }
+.chapter-grid { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(2rem, 5vw, 4rem); align-items: start; }
+.chapter-alt .chart { background: var(--deep); }
+
+/* Gráficas */
+.charts { display: grid; gap: 1.2rem; }
+.chart { margin: 0; background: var(--tide); border-radius: 16px; padding: 1.2rem 1.2rem 1rem; }
+.chart figcaption { font-weight: 700; margin-bottom: .8rem; display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; }
+.chart-area { width: 100%; }
+.chart-area svg { display: block; width: 100%; height: auto; overflow: visible; }
+.chart-wide { margin-top: 1.4rem; }
+select {
+  font: inherit; color: var(--foam); background: var(--reef);
+  border: 0; border-radius: 999px; padding: .25rem .8rem; cursor: pointer;
+}
+
+.axis text, .label { fill: var(--mist); font: 400 12px var(--body); }
+.axis line, .grid line { stroke: var(--reef); }
+.line { fill: none; stroke: var(--signal); stroke-width: 2.5; stroke-linejoin: round; stroke-linecap: round; }
+.line-2 { stroke: var(--amber); }
+.area { fill: var(--signal); opacity: .14; }
+.bar { fill: var(--signal); }
+.bar-muted { fill: var(--sea); }
+.peak { fill: var(--foam); font: 700 12px var(--body); }
+.dot { fill: var(--signal); }
+.legend { display: flex; gap: 1.2rem; font-size: .9rem; color: var(--mist); margin-top: .6rem; }
+.legend span::before { content: ""; display: inline-block; width: 14px; height: 3px; margin-right: 6px; vertical-align: middle; background: var(--signal); border-radius: 2px; }
+.legend span.l2::before { background: var(--amber); }
+
+/* Ranking de municipios */
+.ranking { list-style: none; margin: 0; padding: 0; display: grid; gap: .55rem; }
+.ranking li { display: grid; grid-template-columns: 10rem 1fr 4.5rem; align-items: center; gap: .8rem; font-size: .95rem; }
+.ranking .barra { height: 10px; border-radius: 999px; background: var(--signal); transform-origin: left; }
+.ranking .valor { text-align: right; font-variant-numeric: tabular-nums; color: var(--mist); }
+
+/* Selector de eventos */
+.picker { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1.4rem; }
+.chip {
+  font: 700 .95rem var(--body); color: var(--foam); background: var(--reef);
+  border: 0; border-radius: 999px; padding: .6rem 1rem; cursor: pointer;
+  transition: transform 160ms var(--ease-out), background-color 160ms var(--ease-out);
+}
+.chip:active { transform: scale(.97); }
+.chip[aria-pressed="true"] { background: var(--signal); color: var(--deep); }
+.note { color: var(--mist); font-size: .95rem; margin-top: .9rem; max-width: 52rem; }
+
+/* Método */
+.method-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1.5rem, 4vw, 3rem); }
+.method h3 { font-size: 1.3rem; margin-bottom: .7rem; }
+.method ul { margin: 0; padding-left: 1.1rem; display: grid; gap: .45rem; }
+.method-grid p + p { margin-top: .8rem; }
+
+.footer { margin-top: clamp(5rem, 10vw, 8rem); padding-bottom: 2.5rem; color: var(--mist); font-size: .92rem; display: grid; gap: .4rem; }
+
+@media (hover: hover) and (pointer: fine) {
+  .chip:hover { background: var(--sea); }
+  .chip[aria-pressed="true"]:hover { background: var(--signal-strong); }
+}
+@media (max-width: 900px) {
+  #dengue, .chapter-grid, .method-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  .topbar nav { display: none; }
+  .ranking li { grid-template-columns: 7.5rem 1fr 3.8rem; font-size: .88rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .chip:active { transform: none; }
+}
