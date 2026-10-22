@@ -102,5 +102,213 @@
    "municipio": "San Pedro De Uraba",
    "casos": 5680
   }
+ ],
+ "470": [
+  {
+   "codigo": "05250",
+   "municipio": "El Bagre",
+   "casos": 14213
+  },
+  {
+   "codigo": "05873",
+   "municipio": "Vigia Del Fuerte",
+   "casos": 4433
+  },
+  {
+   "codigo": "05895",
+   "municipio": "Zaragoza",
+   "casos": 4012
+  },
+  {
+   "codigo": "05120",
+   "municipio": "Caceres",
+   "casos": 3844
+  },
+  {
+   "codigo": "05736",
+   "municipio": "Segovia",
+   "casos": 2289
+  },
+  {
+   "codigo": "05837",
+   "municipio": "Turbo",
+   "casos": 1317
+  },
+  {
+   "codigo": "05790",
+   "municipio": "Taraza",
+   "casos": 1174
+  },
+  {
+   "codigo": "05490",
+   "municipio": "Necocli",
+   "casos": 838
+  },
+  {
+   "codigo": "05847",
+   "municipio": "Urrao",
+   "casos": 825
+  },
+  {
+   "codigo": "05495",
+   "municipio": "Nechi",
+   "casos": 728
+  }
+ ],
+ "831": [
+  {
+   "codigo": "05001",
+   "municipio": "Medellin",
+   "casos": 61645
+  },
+  {
+   "codigo": "05088",
+   "municipio": "Bello",
+   "casos": 7860
+  },
+  {
+   "codigo": "05360",
+   "municipio": "Itagui",
+   "casos": 7167
+  },
+  {
+   "codigo": "05266",
+   "municipio": "Envigado",
+   "casos": 3314
+  },
+  {
+   "codigo": "05615",
+   "municipio": "Rionegro",
+   "casos": 2741
+  },
+  {
+   "codigo": "05376",
+   "municipio": "La Ceja",
+   "casos": 2029
+  },
+  {
+   "codigo": "05045",
+   "municipio": "Apartado",
+   "casos": 1969
+  },
+  {
+   "codigo": "05212",
+   "municipio": "Copacabana",
+   "casos": 1449
+  },
+  {
+   "codigo": "05837",
+   "municipio": "Turbo",
+   "casos": 1326
+  },
+  {
+   "codigo": "05631",
+   "municipio": "Sabaneta",
+   "casos": 1302
+  }
+ ],
+ "820": [
+  {
+   "codigo": "05001",
+   "municipio": "Medellin",
+   "casos": 18403
+  },
+  {
+   "codigo": "05088",
+   "municipio": "Bello",
+   "casos": 2580
+  },
+  {
+   "codigo": "05360",
+   "municipio": "Itagui",
+   "casos": 1001
+  },
+  {
+   "codigo": "05045",
+   "municipio": "Apartado",
+   "casos": 584
+  },
+  {
+   "codigo": "05266",
+   "municipio": "Envigado",
+   "casos": 417
+  },
+  {
+   "codigo": "05579",
+   "municipio": "Puerto Berrio",
+   "casos": 411
+  },
+  {
+   "codigo": "05837",
+   "municipio": "Turbo",
+   "casos": 357
+  },
+  {
+   "codigo": "05172",
+   "municipio": "Chigorodo",
+   "casos": 297
+  },
+  {
+   "codigo": "05154",
+   "municipio": "Caucasia",
+   "casos": 270
+  },
+  {
+   "codigo": "05212",
+   "municipio": "Copacabana",
+   "casos": 247
+  }
+ ],
+ "420": [
+  {
+   "codigo": "05854",
+   "municipio": "Valdivia",
+   "casos": 2415
+  },
+  {
+   "codigo": "05040",
+   "municipio": "Anori",
+   "casos": 2163
+  },
+  {
+   "codigo": "05837",
+   "municipio": "Turbo",
+   "casos": 1555
+  },
+  {
+   "codigo": "05147",
+   "municipio": "Carepa",
+   "casos": 1524
+  },
+  {
+   "codigo": "05736",
+   "municipio": "Segovia",
+   "casos": 1257
+  },
+  {
+   "codigo": "05790",
+   "municipio": "Taraza",
+   "casos": 1215
+  },
+  {
+   "codigo": "05045",
+   "municipio": "Apartado",
+   "casos": 1138
+  },
+  {
+   "codigo": "05234",
+   "municipio": "Dabeiba",
+   "casos": 1041
+  },
+  {
+   "codigo": "05604",
+   "municipio": "Remedios",
+   "casos": 1023
+  },
+  {
+   "codigo": "05361",
+   "municipio": "Ituango",
+   "casos": 994
+  }
  ]
 }
