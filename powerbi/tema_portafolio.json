@@ -1,0 +1,33 @@
+{
+  "name": "Portafolio Alexander Mejía",
+  "dataColors": ["#2141B5", "#E2560E", "#1C8A4B", "#9FB0E6", "#C2822A", "#5F5F66", "#7A4FD6", "#15693A"],
+  "foreground": "#17181C",
+  "foregroundNeutralSecondary": "#45464C",
+  "foregroundNeutralTertiary": "#5F5F66",
+  "background": "#FBF9F4",
+  "backgroundLight": "#F3EFE6",
+  "backgroundNeutral": "#EBE5D8",
+  "tableAccent": "#2141B5",
+  "good": "#1C8A4B",
+  "neutral": "#C2822A",
+  "bad": "#B3261E",
+  "maximum": "#E2560E",
+  "center": "#9FB0E6",
+  "minimum": "#2141B5",
+  "textClasses": {
+    "title": { "fontFace": "Segoe UI Semibold", "fontSize": 13, "color": "#17181C" },
+    "header": { "fontFace": "Segoe UI Semibold", "fontSize": 12, "color": "#17181C" },
+    "label": { "fontFace": "Segoe UI", "fontSize": 10, "color": "#45464C" },
+    "callout": { "fontFace": "Segoe UI Bold", "fontSize": 28, "color": "#17181C" }
+  },
+  "visualStyles": {
+    "*": {
+      "*": {
+        "background": [{ "show": true, "color": { "solid": { "color": "#FBF9F4" } }, "transparency": 0 }],
+        "border": [{ "show": true, "color": { "solid": { "color": "#D9D3C7" } }, "radius": 8 }],
+        "dropShadow": [{ "show": false }]
+      }
+    },
+    "page": { "*": { "background": [{ "color": { "solid": { "color": "#F3EFE6" } }, "transparency": 0 }] } }
+  }
+}

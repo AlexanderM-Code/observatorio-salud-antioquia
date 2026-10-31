@@ -66,7 +66,7 @@ Una sola página con este orden:
 5. **Gráfico de barras**: `dim_municipio[municipio]` con `Casos`, Top 10 (filtro de nivel visual) y excluyendo `desconocido = Verdadero`.
 6. **Mapa** (opcional): `dim_municipio[municipio]` + "Antioquia, Colombia" como ubicación.
 
-Colores sugeridos para que coincida con tu marca: fondo `#0F2027`, tarjetas `#172E37`, acento `#4FC3F7`.
+Para que combine con el portafolio, importa el tema: **Vista → Temas → Buscar temas** y elige `powerbi/tema_portafolio.json`.
 
 Guarda el archivo como `powerbi/observatorio_salud_antioquia.pbix` y toma 2 capturas para el README (`docs/img/powerbi-1.png`, `powerbi-2.png`).
 
