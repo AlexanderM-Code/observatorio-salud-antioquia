@@ -2,7 +2,7 @@
 
 Pipeline de datos, API y dashboards sobre los **casos notificados al SIVIGILA en Antioquia entre 2007 y 2022**: dengue, malaria, varicela, tuberculosis, leishmaniasis y decenas de eventos de interés en salud pública.
 
-**[Ver el observatorio en vivo](https://alexanderm-code.github.io/observatorio-salud-antioquia/)**
+**[Ver el observatorio en vivo](https://alexanderm-code.github.io/observatorio-salud-antioquia/)** · **[Tablero interactivo en Data Studio](https://datastudio.google.com/reporting/fa318396-d03e-4a63-96a4-4c17ff79d889)**
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white)
@@ -110,7 +110,7 @@ pytest -v
 ## Dashboards
 
 - **Power BI:** ver `powerbi/` (guía paso a paso y medidas DAX).
-- **Looker Studio:** enlace público pendiente.
+- **Data Studio (antes Looker Studio):** [tablero público](https://datastudio.google.com/reporting/fa318396-d03e-4a63-96a4-4c17ff79d889) con filtros por evento y año, casos por año, curva semanal y los 10 municipios con más casos. Usa `powerbi/looker_casos_antioquia.csv`, un archivo único con los nombres ya unidos.
 
 ## Fuente y licencia
 
