@@ -109,7 +109,9 @@ pytest -v
 
 ## Dashboards
 
-- **Power BI:** ver `powerbi/` (guía paso a paso y medidas DAX).
+- **Power BI:** `powerbi/observatorio_salud_antioquia.pbix`, con medidas DAX para total de casos, municipios, promedio semanal y semana pico, y filtros por evento y año.
+
+  ![Tablero de Power BI del observatorio](docs/img/powerbi-dashboard.png)
 - **Data Studio (antes Looker Studio):** [tablero público](https://datastudio.google.com/reporting/fa318396-d03e-4a63-96a4-4c17ff79d889) con filtros por evento y año, casos por año, curva semanal y los 10 municipios con más casos. Usa `powerbi/looker_casos_antioquia.csv`, un archivo único con los nombres ya unidos.
 
 ## Fuente y licencia
